@@ -1,6 +1,6 @@
 {
   "name": "cra-blank",
-  "version": "0.2.2",
+  "version": "0.2.21",
   "description": "Custom create-react-app scripts adding emotion and normalize.css",
   "repository": {
     "type": "git",
