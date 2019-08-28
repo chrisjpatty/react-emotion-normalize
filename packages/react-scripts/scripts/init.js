@@ -156,15 +156,24 @@ module.exports = function(
 
   let command;
   let args;
+  let otherArgs;
 
   if (useYarn) {
     command = 'yarnpkg';
     args = ['add'];
+    otherArgs = ['add'];
   } else {
     command = 'npm';
     args = ['install', '--save', verbose && '--verbose'].filter(e => e);
+    otherArgs = ['install', '--save', verbose && '--verbose'].filter(e => e);
   }
   args.push('react', 'react-dom');
+  otherArgs.push(
+    '@emotion/core',
+    '@emotion/styled',
+    'emotion-theming',
+    'normalize.css'
+  );
 
   // Install additional template dependencies, if present
   const templateDependenciesPath = path.join(
@@ -193,6 +202,12 @@ module.exports = function(
       console.error(`\`${command} ${args.join(' ')}\` failed`);
       return;
     }
+  }
+  //Add new dependencies
+  const proc = spawn.sync(command, otherArgs, { stdio: 'inherit' });
+  if (proc.status !== 0) {
+    console.error(`\`${command} ${otherArgs.join(' ')}\` failed`);
+    return;
   }
 
   if (useTypeScript) {
