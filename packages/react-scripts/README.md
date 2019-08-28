@@ -1,4 +1,11 @@
-# react-scripts
+# cra-blank
+
+This package overrides the default create-react-app configuration with stripped down templates, and the following default packages:
+
+- @emotion/core
+- @emotion/styled
+- emotion-theming
+- normalize.css
 
 This package includes scripts and configuration used by [Create React App](https://github.com/facebook/create-react-app).<br>
 Please refer to its documentation:

@@ -1,10 +1,10 @@
 {
-  "name": "react-scripts",
-  "version": "3.1.1",
-  "description": "Configuration and scripts for Create React App.",
+  "name": "cra-blank",
+  "version": "0.2.0",
+  "description": "Custom create-react-app scripts adding emotion and normalize.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/facebook/create-react-app.git",
+    "url": "https://github.com/chrisjpatty/react-emotion-normalize.git",
     "directory": "packages/react-scripts"
   },
   "license": "MIT",
@@ -12,7 +12,7 @@
     "node": ">=8.10"
   },
   "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+    "url": "https://github.com/chrisjpatty/react-emotion-normalize/issues"
   },
   "files": [
     "bin",
@@ -83,6 +83,10 @@
     "workbox-webpack-plugin": "4.3.1"
   },
   "devDependencies": {
+    "@emotion/core": "^10.0.16",
+    "@emotion/styled": "^10.0.15",
+    "emotion-theming": "^10.0.14",
+    "normalize.css": "^8.0.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
   },
