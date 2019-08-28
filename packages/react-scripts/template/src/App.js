@@ -5,9 +5,9 @@ import './App.css';
 const App = () => {
   return (
     <div>
-      <header></header>
-      <main></main>
-      <footer></footer>
+      <header>Welcome to React</header>
+      <main>Edit App.js to get started</main>
+      <footer>This template comes with Emotion and css resets included</footer>
     </div>
   );
 };
